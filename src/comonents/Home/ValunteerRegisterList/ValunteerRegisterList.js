@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const ValunteerRegisterList = () => {
     const [volunteers, setVolunteers] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/volunteers')
+        fetch('https://frozen-taiga-27625.herokuapp.com/volunteers')
         .then(res => res.json())
         .then(data => setVolunteers(data))
     },[])
@@ -17,7 +17,7 @@ const ValunteerRegisterList = () => {
         const confirm = window.confirm("are you sure ?");
     
         if (confirm === true) {
-            const url = `http://localhost:5000/volunteers/${id}`
+            const url = `https://frozen-taiga-27625.herokuapp.com/volunteers/${id}`
             fetch(url, {
                 method:"DELETE"
             })

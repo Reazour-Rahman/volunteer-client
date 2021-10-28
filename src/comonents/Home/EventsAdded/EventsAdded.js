@@ -5,7 +5,7 @@ const EventsAdded = () => {
     const [events, setEvents] = useState([])
 
     useEffect(()=>{
-            fetch('http://localhost:5000/events')
+            fetch('https://frozen-taiga-27625.herokuapp.com/events')
             .then(res => res.json())
             .then(data => setEvents(data))
     },[]);
@@ -15,7 +15,7 @@ const EventsAdded = () => {
     const confirm = window.confirm("are you sure ?");
 
     if (confirm === true) {
-        const url = `http://localhost:5000/events/${id}`
+        const url = `https://frozen-taiga-27625.herokuapp.com/events/${id}`
         fetch(url, {
             method:"DELETE"
         })

@@ -13,7 +13,7 @@ const AddEvents = () => {
     /* take input and send to server */
     const onSubmit = data => {
         console.log(data)
-        axios.post('http://localhost:5000/events', data)
+        axios.post('https://frozen-taiga-27625.herokuapp.com/events', data)
         .then(res => {
             if (res.data.insertedId) {
                 alert("Added successfully")

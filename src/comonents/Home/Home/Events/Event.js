@@ -13,7 +13,7 @@ const Event = () => {
     useEffect(()=>{
         setTimeout(() => {
 
-            fetch('http://localhost:5000/services')
+            fetch('https://frozen-taiga-27625.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
 

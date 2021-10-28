@@ -12,7 +12,7 @@ const RegisterVolunteer = () => {
     const {volunteerId} = useParams();
 
     useEffect(() =>{
-        fetch('http://localhost:5000/services')
+        fetch('https://frozen-taiga-27625.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
@@ -20,7 +20,7 @@ const RegisterVolunteer = () => {
     /* take input and send to server */
     const onSubmit = data => {
         console.log(data)
-        axios.post('http://localhost:5000/volunteers', data)
+        axios.post('https://frozen-taiga-27625.herokuapp.com/volunteers', data)
         .then(res => {
             if (res.data.insertedId) {
                 alert("Added successfully")
